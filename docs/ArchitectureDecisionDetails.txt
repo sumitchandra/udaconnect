@@ -1,0 +1,5 @@
+1. Connections Service: I choose REST API to get the connection data. It is simple and user-friendly, making it ideal for Connection services.
+
+2. Persons Service: Also, in Person services I choose REST API to get person data. It is simple and easy to use for HTTP requests.
+
+3. Locations Microservices: I choose gRPC and Kafka for message passing. Kafka handles high data volumes and gRPC ensures structured, secure, and fast data transmission.
