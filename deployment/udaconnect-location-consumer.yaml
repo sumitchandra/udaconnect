@@ -29,7 +29,7 @@ spec:
         service: udaconnect-location-consumer
     spec:
       containers:
-        - image: phongvm/location-consumer:latest
+        - image: suchan03/udacity-location-consumer:latest
           name: location-consumer
           imagePullPolicy: Always
           env:
