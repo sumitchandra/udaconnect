@@ -1,0 +1,50 @@
+openapi: 3.0.1
+info:
+  title: UdaConnect connection API
+  version: 0.1.0
+  description: ""
+servers:
+  - url: /
+tags:
+  - name: UdaConnect
+    description: Connections
+paths:
+  "/api/persons/{person_id}/connection":
+    get:
+      tags:
+        - UdaConnect
+      operationId: get_connection
+      parameters:
+        - name: distance
+          in: query
+          description: Proximity in meters
+          schema:
+            type: string
+        - name: end_date
+          in: query
+          description: End Date
+          schema:
+            type: string
+        - name: start_date
+          in: query
+          description: Start Date
+          schema:
+            type: string
+        - name: person_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Success
+          content: {}
+components:
+  responses:
+    ParseError:
+      description: When a mask can't be parsed
+      content: {}
+    MaskError:
+      description: When any error occurs on mask
+      content: {}
+x-original-swagger-version: "2.0"

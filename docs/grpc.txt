@@ -1,0 +1,7 @@
+Please run the following steps to create a sample request:
+1. Go to modules/location-producer ``` cd  modules/location-producer```
+2. Install & run python.
+3. ```pip install -r requirements.txt ```
+1. ``` cd  modules/location-producer/app/udaconnect```
+3. Start the gRPC server: ```python services.py ```
+4. Run the command: ```python sampleMessage.py```

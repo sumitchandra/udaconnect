@@ -1,0 +1,55 @@
+openapi: 3.0.0
+info:
+  title: UdaConnect Person API
+  version: 1.0.0
+  description: Get Person Details
+servers:
+  - url: /
+tags:
+  - name: UdaConnect
+    description: Connections
+paths:
+  /api/persons:
+    get:
+      tags:
+        - UdaConnect
+      operationId: getperson
+      responses:
+        "200":
+          description: Success
+          content: {}
+      description: Get all persons data
+    post:
+      tags:
+        - UdaConnect
+      operationId: postPerson
+      responses:
+        "200":
+          description: Success
+          content: {}
+      description: Post request for persons data
+  "/api/persons/{person_id}":
+    get:
+      tags:
+        - UdaConnect
+      operationId: get_person_byId
+      parameters:
+        - name: person_id
+          in: path
+          description: Unique ID for a given Person
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Success
+          content: {}
+      description: Persons by Id
+components:
+  responses:
+    ParseError:
+      description: When a mask can't be parsed
+      content: {}
+    MaskError:
+      description: When any error occurs on mask
+      content: {}
